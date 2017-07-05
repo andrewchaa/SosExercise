@@ -2,22 +2,19 @@
 {
     public class CustomerService
     {
-        private readonly IArchivedDataService _archivedDataService;
+        private readonly IDataServiceFactory _dataServiceFactory;
 
-        public CustomerService(IArchivedDataService archivedDataService)
+        public CustomerService(IDataServiceFactory dataServiceFactory)
         {
-            _archivedDataService = archivedDataService;
+            _dataServiceFactory = dataServiceFactory;
         }
 
         public Customer GetCustomer(int customerId, bool isCustomerArchived)
         {
-            if (isCustomerArchived)
-            {
-                var customer = _archivedDataService.GetCustomer(customerId);
-                return customer;
-            }
+            var dataService = _dataServiceFactory.Create(isCustomerArchived);
+            var customer = dataService.GetCustomer(customerId);
 
-            return new Customer();
+            return customer;
         }
     }
 }

@@ -40,10 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArchivedDataService.cs" />
+    <Compile Include="CustomerDataAccess.cs" />
+    <Compile Include="DataServiceFactory.cs" />
+    <Compile Include="IArchivedDataService.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerService.cs" />
-    <Compile Include="IArchivedDataService.cs" />
+    <Compile Include="IDataService.cs" />
+    <Compile Include="IDataServiceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

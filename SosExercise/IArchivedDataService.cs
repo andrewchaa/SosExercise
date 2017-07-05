@@ -1,7 +1,10 @@
 ﻿namespace SosExercise
 {
-    public interface IArchivedDataService
+    public class ArchivedDataService : IDataService
     {
-        Customer GetCustomer(int customerId);
+        public Customer GetCustomer(int customerId)
+        {
+            return new Customer();
+        }
     }
 }

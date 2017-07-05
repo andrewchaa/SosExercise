@@ -1,4 +1,4 @@
-﻿namespace AsosExercise
+﻿namespace SosExercise
 {
     public class Customer
     {

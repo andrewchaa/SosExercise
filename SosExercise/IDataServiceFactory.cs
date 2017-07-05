@@ -2,6 +2,6 @@
 {
     public interface IDataServiceFactory
     {
-        IDataService Create(bool isCustomerArchived);
+        IArchivedDataService Create(bool isCustomerArchived);
     }
 }

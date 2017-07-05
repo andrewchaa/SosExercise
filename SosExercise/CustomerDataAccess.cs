@@ -1,6 +1,6 @@
 ﻿namespace SosExercise
 {
-    public class CustomerDataAccess : IDataService
+    public class CustomerDataAccess : ICustomerDataAccess
     {
         public Customer GetCustomer(int customerId)
         {
